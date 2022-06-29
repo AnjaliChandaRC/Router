@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { Switch, BrowserRouter as Router } from "react-router-dom";
+import { Route } from "react-router-dom";
+import Home from "./component/Home";
+import Demo from "./component/Demo";
+import Header from "./component/Header";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/demo" component={Demo} />
+      </Switch>
+    </Router>
   );
 }
 
