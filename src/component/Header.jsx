@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, withRouter } from "react-router-dom";
+import { starData } from "../content/content";
 const Header = ({ history }) => {
   // const pathname = window.location.pathname;
   // const [active, setActive] = useState(pathname);
@@ -17,14 +18,14 @@ const Header = ({ history }) => {
           </NavLink>
         </li>
       </ul> */}
-      <ul>
+      {/* <ul>
         <li>
           <span
             onClick={() => {
               history.push("/");
-              // setActive("/");
+              setActive("/");
             }}
-            // className={`${active === "/" ? "red" : ""}`}
+            className={`${active === "/" ? "red" : ""}`}
           >
             Home
           </span>
@@ -33,14 +34,23 @@ const Header = ({ history }) => {
           <span
             onClick={() => {
               history.push("/demo");
-              // setActive("/demo");
+              setActive("/demo");
             }}
-            // className={`${active === "/demo" ? "red" : ""}`}
+            className={`${active === "/demo" ? "red" : ""}`}
           >
             Demo
           </span>
         </li>
-      </ul>
+        <li>
+          <span
+            onClick={() => {
+              history.push("/about");
+            }}
+          >
+            About
+          </span>
+        </li>
+      </ul> */}
     </>
   );
 };

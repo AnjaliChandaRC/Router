@@ -1,3 +1,11 @@
 .red {
   color: red;
 }
+
+.orange {
+  fill: orange !important;
+}
+
+.redclr {
+  fill: red;
+}
