@@ -10,6 +10,7 @@ import Header from "./component/Header";
 import About from "./component/About";
 import Star from "./component/Star";
 import Form from "./component/Form";
+import FormTwo from "./component/FormTwo";
 function App() {
   return (
     <Router>
@@ -20,6 +21,7 @@ function App() {
         <Route exact path="/about" component={About} />
         <Route exact path="/star" component={Star} />
         <Route exact path="/form" component={Form} />
+        <Route exact path="/formtwo" component={FormTwo} />
       </Switch>
     </Router>
   );

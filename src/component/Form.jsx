@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { EyeClose, EyeIcon } from "../common/Icons";
 function Form() {
   const [firstName, setfirstName] = useState();
   const [lastName, setlastName] = useState();
@@ -7,6 +7,8 @@ function Form() {
   const [passwordName, setpasswordName] = useState();
   const [confirmpassowrdName, setconfirmpasswordName] = useState();
   const [showData, setShowData] = useState([]);
+  const [showHidePassword, setShowHidePassword] = useState(false);
+  const [showHidePasswordtwo, setShowHidePasswordtwo] = useState(false);
 
   //   const changeHandler = (e) => {
   //     setfirstName(e);
@@ -55,21 +57,40 @@ function Form() {
                     placeholder="Email"
                   />
                 </div>
-                <div className="mb-3">
-                  <input
-                    onChange={(e) => setpasswordName(e.target.value)}
-                    type="password"
-                    className="form-control"
-                    placeholder="Password"
-                  />
+                <div className="mb-3 d-flex position-relative">
+                  <div>
+                    <input
+                      onChange={(e) => setpasswordName(e.target.value)}
+                      type={showHidePasswordtwo ? "text" : "password"}
+                      className="form-control"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div
+                    className="position-absolute eye_position"
+                    onClick={() => setShowHidePasswordtwo(!showHidePasswordtwo)}
+                  >
+                    {showHidePasswordtwo ? <EyeIcon /> : <EyeClose />}
+                  </div>
                 </div>
-                <div className="mb-3">
-                  <input
-                    onChange={(e) => setconfirmpasswordName(e.target.value)}
-                    type="password"
-                    className="form-control"
-                    placeholder="Confirm Password"
-                  />
+                <div className="mb-3 d-flex position-relative">
+                  <div className="">
+                    <input
+                      onChange={(e) => setconfirmpasswordName(e.target.value)}
+                      type={showHidePassword ? "text" : "password"}
+                      className="form-control"
+                      placeholder="Confirm Password"
+                    />
+                  </div>
+                  <div
+                    className="position-absolute eye_position"
+                    onClick={() => setShowHidePassword(!showHidePassword)}
+                  >
+                    {showHidePassword ? <EyeIcon /> : <EyeClose />}
+                  </div>
+                  {/* <div className="position-absolute eye_position">
+                    <EyeClose />
+                  </div> */}
                 </div>
                 <div className="text-center mt-4">
                   <button

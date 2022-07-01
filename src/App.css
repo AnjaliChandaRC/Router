@@ -36,3 +36,8 @@
 .submit_btn:hover {
   transform: scale(1.02);
 }
+
+.eye_position {
+  right: 5%;
+  top: 12%;
+}
