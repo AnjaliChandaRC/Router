@@ -9,3 +9,30 @@
 .redclr {
   fill: red;
 }
+
+/*FORM-------------CSS------------------START*/
+.form_border {
+  border: 5px solid red;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: pink;
+}
+
+.form-control:focus {
+  background-color: #fff;
+  border-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.submit_btn {
+  border-radius: 10px;
+  border: 3px solid red;
+  color: gray;
+  background-color: transparent;
+  transition: all 0.4s ease-in-out;
+}
+
+.submit_btn:hover {
+  transform: scale(1.02);
+}

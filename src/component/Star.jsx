@@ -12,7 +12,7 @@ const Star = () => {
               <div className="col-2" key={index}>
                 <div
                   onClick={() => SetIndexValue(index)}
-                  className={indexvalue === index ? "orange" : "redclr"}
+                  className={indexvalue >= index ? "orange" : "redclr"}
                 >
                   {val.imageUrl}
                 </div>
