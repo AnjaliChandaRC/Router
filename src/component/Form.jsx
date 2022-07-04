@@ -67,7 +67,7 @@ function Form() {
                     />
                   </div>
                   <div
-                    className="position-absolute eye_position"
+                    className="position-absolute eye_position cursor"
                     onClick={() => setShowHidePasswordtwo(!showHidePasswordtwo)}
                   >
                     {showHidePasswordtwo ? <EyeIcon /> : <EyeClose />}
@@ -83,7 +83,7 @@ function Form() {
                     />
                   </div>
                   <div
-                    className="position-absolute eye_position"
+                    className="position-absolute eye_position cursor"
                     onClick={() => setShowHidePassword(!showHidePassword)}
                   >
                     {showHidePassword ? <EyeIcon /> : <EyeClose />}
