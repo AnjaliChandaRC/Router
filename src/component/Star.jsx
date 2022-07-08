@@ -4,7 +4,6 @@ const Star = () => {
   const [indexvaluefirst, SetIndexValuefirst] = useState(null);
   const [indexvaluesec, SetIndexValuesec] = useState(null);
   const [indexvaluethird, SetIndexValuethird] = useState(null);
-  const [indexvaluefourth, SetIndexValuefourth] = useState(null);
   return (
     <>
       <div className="container mt-5">

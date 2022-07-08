@@ -14,7 +14,7 @@ import FormTwo from "./component/FormTwo";
 function App() {
   return (
     <Router>
-      <Header />
+      {/* <Header /> */}
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/demo" component={Demo} />

@@ -45,3 +45,156 @@
 .cursor {
   cursor: pointer;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*ROOTS==========VARIABLES=================START*/
+:root {
+  /*FONT===SIZES===START*/
+  --font-xsm: 16px;
+  --font-sm: 20px;
+  --font-xmd: 22px;
+  --font-md: 25px;
+  --font-xlg: 35px;
+  --font-lg: 40px;
+  --font-xl: 56px;
+  /*COLORS========START*/
+  --black: #000;
+  --white: #fff;
+}
+
+/*MEDIA=================FONT=============SIZES=================START*/
+@media (max-width: 1399.98px) {
+  :root {
+    --font-xsm: 16px;
+    --font-sm: 20px;
+    --font-xmd: 22px;
+    --font-md: 25px;
+    --font-xlg: 32px;
+    --font-lg: 38px;
+    --font-xl: 50px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  :root {
+    --font-xsm: 16px;
+    --font-sm: 20px;
+    --font-xmd: 22px;
+    --font-md: 25px;
+    --font-xlg: 30px;
+    --font-lg: 35px;
+    --font-xl: 40px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  :root {
+    --font-xsm: 16px;
+    --font-sm: 20px;
+    --font-xmd: 22px;
+    --font-md: 25px;
+    --font-xlg: 26px;
+    --font-lg: 30px;
+    --font-xl: 35px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  :root {
+    --font-xsm: 14px;
+    --font-sm: 16px;
+    --font-xmd: 18px;
+    --font-md: 20px;
+    --font-xlg: 22px;
+    --font-lg: 26px;
+    --font-xl: 32px;
+  }
+}
+
+/*FONT=====================SIZES==================CLASSES==============START*/
+.font_xsm {
+  font-size: var(--font-xsm) !important;
+}
+
+.font_sm {
+  font-size: var(--font-sm) !important;
+}
+
+.font_xmd {
+  font-size: var(--font-xmd) !important;
+}
+
+.font_md {
+  font-size: var(--font-md) !important;
+}
+
+.font_xlg {
+  font-size: var(--font-xlg) !important;
+}
+
+.font_lg {
+  font-size: var(--font-lg) !important;
+}
+
+.font_xl {
+  font-size: var(--font-xl) !important;
+}
+
+/*COLORS-=====================CLASSES========================START*/
+.black {
+  color: var(--black) !important;
+}
+
+.white {
+  color: var(--white) !important;
+}
+
+/*FONT====================WEIGHT==================CLASSES======================START*/
+.fw_normal {
+  font-weight: normal !important;
+}
+
+.fw_light {
+  font-weight: 300;
+}
+
+.fw_semibold {
+  font-weight: 600;
+}
+
+.fw_bold {
+  font-weight: 700 !important;
+}
+
+/*COMMON=====================CLASSES=======================START*/
+.main_heading {
+  font-size: var(--font-xlg);
+  font-weight: 300;
+  color: var(--black);
+}
+
+.main_para {
+  font-size: var(--font-xsm);
+  font-weight: 400;
+  color: var(--black);
+}
+
+.common_btn {
+  font-size: var(--font-md);
+  font-weight: 300;
+  background: var(--black);
+  color: var(--white);
+  border: 1px solid #000000;
+  transition: all 0.4s ease-in-out;
+}
+
+.common_btn:hover {
+  transform: scale(1.03);
+}
