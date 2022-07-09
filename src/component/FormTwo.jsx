@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import { EyeClose, EyeIcon } from "../common/Icons";
 import swal from "sweetalert";
-
+import Star from "../assets/image/star.png";
 function FormTwo() {
+  const [UploadImg, setUploadImg] = useState();
+  const changeHandler = (e) => {
+    const NewImg = URL.createObjectURL(e.target.files[0]);
+    console.log("NewImg", NewImg);
+    setUploadImg(NewImg);
+  };
   const InitialValue = {
     FirstName: "",
     LastName: "",
@@ -74,8 +80,8 @@ function FormTwo() {
 
   return (
     <>
-      <section className="d-flex min-vh-100 align-items-center justify-content-center">
-        <div className="container d-flex justify-content-center align-items center ">
+      <section className="d-flex flex-column min-vh-100 align-items-center justify-content-center">
+        <div className="container d-flex justify-content-center align-items-center ">
           <div className="row">
             <div className="col">
               <div className="form_border">
@@ -188,6 +194,21 @@ function FormTwo() {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="m-auto">
+            <input
+              onChange={(e) => changeHandler(e)}
+              type="file"
+              id="my_file"
+              hidden
+            />
+            <label htmlFor="my_file">
+              <img
+                className="w-100"
+                src={UploadImg ? UploadImg : Star}
+                alt=""
+              />
+            </label>
           </div>
         </div>
       </section>

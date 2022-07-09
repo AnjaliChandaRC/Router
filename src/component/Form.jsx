@@ -19,9 +19,13 @@ function Form() {
     const image = URL.createObjectURL(e.target.files[0]);
     setUploadImg(image);
   };
+  const uploadImageHandlerSecond = (e) => {
+    const Images = e.target.files;
+    console.log("Images ", Images);
+  };
   const submitData = () => {
     let Data = [];
-    const ValidateValue = ValidateEmail(emailName);
+    // const ValidateValue = ValidateEmail(emailName);
     Data = showData.push(
       firstName,
       lastName,
@@ -32,18 +36,18 @@ function Form() {
     console.log("showData", showData);
   };
 
-  function ValidateEmail(mail) {
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
-      return true;
-    }
-    // alert("You have entered an invalid email address!");
-    return false;
-  }
+  // function ValidateEmail(mail) {
+  //   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+  //     return true;
+  //   }
+  //   // alert("You have entered an invalid email address!");
+  //   return false;
+  // }
 
   return (
     <>
-      <section className="d-flex flex-column min-vh-100 align-items-center justify-content-center">
-        <div className="container d-flex justify-content-center align-items center ">
+      <section className="d-flex min-vh-100 align-items-center justify-content-center">
+        <div className="container d-flex justify-content-center align-items-center ">
           <div className="row">
             <div className="col">
               <div className="form_border">
@@ -119,7 +123,7 @@ function Form() {
             </div>
           </div>
         </div>
-        <div>
+        <div className="">
           <input
             onChange={(e) => uploadImageHandler(e)}
             type="file"
