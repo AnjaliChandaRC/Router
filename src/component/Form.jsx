@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { EyeClose, EyeIcon } from "../common/Icons";
+import NatureImg from "../assets/image/nature.jpg";
 function Form() {
   const [firstName, setfirstName] = useState();
   const [lastName, setlastName] = useState();
@@ -9,10 +10,15 @@ function Form() {
   const [showData, setShowData] = useState([]);
   const [showHidePassword, setShowHidePassword] = useState(false);
   const [showHidePasswordtwo, setShowHidePasswordtwo] = useState(false);
+  const [uploadImg, setUploadImg] = useState();
 
   //   const changeHandler = (e) => {
   //     setfirstName(e);
   //   };
+  const uploadImageHandler = (e) => {
+    const image = URL.createObjectURL(e.target.files[0]);
+    setUploadImg(image);
+  };
   const submitData = () => {
     let Data = [];
     const ValidateValue = ValidateEmail(emailName);
@@ -36,7 +42,7 @@ function Form() {
 
   return (
     <>
-      <section className="d-flex min-vh-100 align-items-center justify-content-center">
+      <section className="d-flex flex-column min-vh-100 align-items-center justify-content-center">
         <div className="container d-flex justify-content-center align-items center ">
           <div className="row">
             <div className="col">
@@ -112,6 +118,21 @@ function Form() {
               </div>
             </div>
           </div>
+        </div>
+        <div>
+          <input
+            onChange={(e) => uploadImageHandler(e)}
+            type="file"
+            id="my_file"
+            hidden
+          />
+          <label htmlFor="my_file">
+            <img
+              className="w-25"
+              src={uploadImg ? uploadImg : NatureImg}
+              alt=""
+            />
+          </label>
         </div>
       </section>
     </>
