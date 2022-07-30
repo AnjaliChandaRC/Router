@@ -11,12 +11,16 @@ import About from "./component/About";
 import Star from "./component/Star";
 import Form from "./component/Form";
 import FormTwo from "./component/FormTwo";
+import Practice from "./component/Practice";
+import ColorAnnimation from "./component/ColorAnnimation";
 function App() {
   return (
     <Router>
       {/* <Header /> */}
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/practice" component={Practice} />
+        <Route exact path="/annimation" component={ColorAnnimation} />
         <Route exact path="/demo" component={Demo} />
         <Route exact path="/about" component={About} />
         <Route exact path="/star" component={Star} />

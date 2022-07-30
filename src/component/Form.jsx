@@ -46,8 +46,8 @@ function Form() {
 
   return (
     <>
-      <section className="d-flex min-vh-100 align-items-center justify-content-center">
-        <div className="container d-flex justify-content-center align-items-center ">
+      <section className="d-flex align-items-center justify-content-center py-5">
+        <div className="container d-flex align-items-center justify-content-center">
           <div className="row">
             <div className="col">
               <div className="form_border">
@@ -107,9 +107,6 @@ function Form() {
                   >
                     {showHidePassword ? <EyeIcon /> : <EyeClose />}
                   </div>
-                  {/* <div className="position-absolute eye_position">
-                    <EyeClose />
-                  </div> */}
                 </div>
                 <div className="text-center mt-4">
                   <button
@@ -123,22 +120,22 @@ function Form() {
             </div>
           </div>
         </div>
-        <div className="">
-          <input
-            onChange={(e) => uploadImageHandler(e)}
-            type="file"
-            id="my_file"
-            hidden
-          />
-          <label htmlFor="my_file">
-            <img
-              className="w-25"
-              src={uploadImg ? uploadImg : NatureImg}
-              alt=""
-            />
-          </label>
-        </div>
       </section>
+      <div className="text-center pb-5">
+        <input
+          onChange={(e) => uploadImageHandler(e)}
+          type="file"
+          id="my_file"
+          hidden
+        />
+        <label htmlFor="my_file">
+          <img
+            className="w-25"
+            src={uploadImg ? uploadImg : NatureImg}
+            alt=""
+          />
+        </label>
+      </div>
     </>
   );
 }

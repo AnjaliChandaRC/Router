@@ -198,3 +198,32 @@
 .common_btn:hover {
   transform: scale(1.03);
 }
+
+/*PRACTICE=================CSS==================START*/
+.btn_change {
+  background-color: pink;
+  color: red;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 2px solid pink;
+}
+
+/*COLOR======ANNIMATION===============CSS================START*/
+.developText {
+  color: red;
+  font-weight: 900;
+  font-size: 35px;
+}
+
+.previewText {
+  color: blue;
+  font-weight: 900;
+  font-size: 35px;
+}
+
+.shipText {
+  color: green;
+  font-weight: 900;
+  font-size: 35px;
+}
