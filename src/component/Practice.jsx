@@ -6,7 +6,8 @@ const Practice = () => {
   const [inputValuSecond, setinputValuSecond] = useState();
   const [showInputValue, setshowInputValue] = useState([]);
   const showValue = () => {
-    showInputValue.push(inputValueFisrt, inputValuSecond);
+    let DataValue = [];
+    DataValue = showInputValue.push(inputValueFisrt, inputValuSecond);
     console.log(showInputValue, "showInputValue");
   };
   return (
