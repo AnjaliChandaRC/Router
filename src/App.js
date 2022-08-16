@@ -13,6 +13,7 @@ import Form from "./component/Form";
 import FormTwo from "./component/FormTwo";
 import Practice from "./component/Practice";
 import ColorAnnimation from "./component/ColorAnnimation";
+import SliderCard from "./component/SliderCard";
 function App() {
   return (
     <Router>
@@ -26,6 +27,7 @@ function App() {
         <Route exact path="/star" component={Star} />
         <Route exact path="/form" component={Form} />
         <Route exact path="/formtwo" component={FormTwo} />
+        <Route exact path="/slider" component={SliderCard} />
       </Switch>
     </Router>
   );

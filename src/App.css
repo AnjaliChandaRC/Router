@@ -227,3 +227,23 @@
   font-weight: 900;
   font-size: 35px;
 }
+
+/*SLIDER===============CSS=======================START*/
+.slider_bg {
+  background: white;
+  border-radius: 6px;
+  border: 1px solid rgb(243, 213, 213);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.slider_bg:hover {
+  transform: translateY(-10px);
+}
+
+@media (max-width:575.98px) {
+  .slider_bg {
+    max-width: 300px;
+    margin: auto;
+  }
+}
