@@ -3,17 +3,15 @@ import { sliderData } from "../content/content";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { useState } from "react";
-
 const SliderCard = () => {
   const slider = useRef();
   var settings = {
     dots: false,
-    autoplay: false,
+    autoplay: true,
     arrows: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: sliderData.length <= 2 ? sliderData.length : 3,
     slidesToScroll: 1,
     responsive: [
       {
@@ -21,7 +19,6 @@ const SliderCard = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          infinite: true,
         },
       },
       {
@@ -40,7 +37,7 @@ const SliderCard = () => {
       },
     ],
   };
-  const [sliderValue, setSliderValue] = useState();
+
   return (
     <>
       <section className="py-5">
