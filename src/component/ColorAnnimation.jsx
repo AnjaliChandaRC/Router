@@ -30,10 +30,10 @@ const ColorAnnimation = () => {
   useEffect(() => {
     setTimeout(() => {
       DataHandler();
-    }, 3000);
+    }, 1000);
   }, [count]);
   return (
-    <div className="text-center">
+    <div className="text-center mt-5 pt-5">
       {Data &&
         Data.map((val, index) => {
           return (

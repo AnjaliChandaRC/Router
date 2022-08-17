@@ -14,6 +14,7 @@ import FormTwo from "./component/FormTwo";
 import Practice from "./component/Practice";
 import ColorAnnimation from "./component/ColorAnnimation";
 import SliderCard from "./component/SliderCard";
+import Annimated from "./component/Annimated";
 function App() {
   return (
     <Router>
@@ -28,6 +29,7 @@ function App() {
         <Route exact path="/form" component={Form} />
         <Route exact path="/formtwo" component={FormTwo} />
         <Route exact path="/slider" component={SliderCard} />
+        <Route exact path="/textclr" component={Annimated} />
       </Switch>
     </Router>
   );

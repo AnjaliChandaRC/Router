@@ -247,3 +247,58 @@
     margin: auto;
   }
 }
+
+/*Annimated============================CSS==========================START*/
+.title-word_one {
+  animation: color-animation-one 4s linear infinite;
+}
+
+.title-word_two {
+  animation: color-animation-two 10s linear infinite;
+}
+
+.title-word_three {
+  animation: color-animation-three 12s linear infinite;
+}
+
+.red {
+  --color-1: red;
+}
+
+.green {
+  --color-1: green;
+}
+
+.orange {
+  --color-1: orange;
+}
+
+@keyframes color-animation-one {
+  50% {
+    color: var(--color-1)
+  }
+
+  100% {
+    color: black;
+  }
+}
+
+@keyframes color-animation-two {
+  50% {
+    color: var(--color-1)
+  }
+
+  100% {
+    color: black;
+  }
+}
+
+@keyframes color-animation-three {
+  50% {
+    color: var(--color-1)
+  }
+
+  100% {
+    color: black;
+  }
+}
