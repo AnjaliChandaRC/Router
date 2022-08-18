@@ -18,6 +18,10 @@
   background-color: pink;
 }
 
+/* .margin-left {
+  margin-left: 200px;
+} */
+
 .form-control:focus {
   background-color: #fff;
   border-color: transparent !important;
@@ -250,15 +254,15 @@
 
 /*Annimated============================CSS==========================START*/
 .title-word_one {
-  animation: color-animation-one 4s linear infinite;
+  animation: color-animation-one 1s linear infinite;
 }
 
 .title-word_two {
-  animation: color-animation-two 10s linear infinite;
+  animation: color-animation-two 2s linear infinite;
 }
 
 .title-word_three {
-  animation: color-animation-three 12s linear infinite;
+  animation: color-animation-three 3s linear infinite;
 }
 
 .red {

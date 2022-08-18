@@ -11,6 +11,10 @@ const SliderCard = () => {
     arrows: false,
     infinite: true,
     speed: 500,
+    // centerMode: true,
+    // centerPadding: "26px",
+    // slidesToShow: 3,
+    // rtl: true,
     slidesToShow: sliderData.length <= 2 ? sliderData.length : 3,
     slidesToScroll: 1,
     responsive: [
@@ -41,7 +45,7 @@ const SliderCard = () => {
   return (
     <>
       <section className="py-5">
-        <div className="container">
+        <div className="margin-left container">
           <div className="row">
             <div className="col-sm-6 text-center m-auto">
               <h4 className="fs-2 fw-bold">Slider Start</h4>
